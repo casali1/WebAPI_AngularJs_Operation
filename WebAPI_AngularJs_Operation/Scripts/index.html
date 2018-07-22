@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script data-require="angular.js@1.4.0-beta.6" data-semver="1.4.0-beta.6" src="https://code.angularjs.org/1.4.0-beta.6/angular.js">
+    </script>
+    <script src="employeeModule.js"></script>
+    <script src="employeeController.js"></script>
+    <script src="employeeService.js"></script>
+
+</head>
+    <body ng-app="employeeApp">
+        <div align="center"><b><u><font size="8px">Employee Records</font></u></b></div>
+        <div ng-controller="EmployeeCtrl" align="center">
+            <table border="1">
+                <tr bgcolor="gray">
+
+                    <td>Employee ID</td>
+                    <td>Employee Name</td>
+                    <td>Email</td>
+                    <td>Phone Number</td>
+                </tr>
+                <tr ng-repeat="employee in employees">
+                    <td><span>{{employee.EmployeeID}}</span></td>
+                    <td><span>{{employee.EmployeeName}}</span></td>
+                    <td><span>{{employee.EmailAdress}}</span></td>
+                    <td><span>{{employee.PhoneNumber}}</span></td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
